@@ -13,9 +13,7 @@
  * @link     https://github.com/ilias-sp/Twitch-Chat-Replay-PHP
  */
  
-require_once('./TwitchChatReplay.php');
-
-
+require_once('src/TwitchChatReplay.php');
 
 // init stuff:
 
@@ -24,7 +22,7 @@ $config['use_twitch_api'] = FALSE;
 // keep the below key anyway, just set value to null if you dont want to use the Twitch API:
 $config['twitch_api_key'] = '';
 // define the Twitch VOD you want to retrieve its chat:
-$config['VOD_id'] = 'v125820793';
+$config['VOD_id'] = 'v253414888';
 // if you want the array to be stored in file, set to TRUE:
 $config['write_to_file'] = TRUE;
 
@@ -32,7 +30,7 @@ $config['write_to_file'] = TRUE;
 
 // run:
 
-$chatreplay = new TwitchChatReplay($config);
+$chatreplay = new Iliassp\TwitchChatReplay\TwitchChatReplay($config);
 
 $chat_replay_array = $chatreplay->retrieve_replay();
 
